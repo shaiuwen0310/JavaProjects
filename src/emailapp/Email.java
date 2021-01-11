@@ -35,18 +35,18 @@ public class Email {
 	// 詢問部門
 	private String setDepartment() {
 		System.out.print("選擇部門\n 1銷售\n 2研發\n 3會計\n 0無\n請輸入數字: ");
-		try (Scanner inScanner = new Scanner(System.in)) {
-			int depChoice = inScanner.nextInt();
-			if (depChoice == 1) {
-				return "sales";
-			} else if (depChoice == 2) {
-				return "dev";
-			} else if (depChoice == 3) {
-				return "acct";
-			} else {
-				return "";
-			}
+		Scanner inScanner = new Scanner(System.in);
+		int depChoice = inScanner.nextInt();
+		if (depChoice == 1) {
+			return "sales";
+		} else if (depChoice == 2) {
+			return "dev";
+		} else if (depChoice == 3) {
+			return "acct";
+		} else {
+			return "";
 		}
+
 	}
 
 	// 建立隨機密碼
